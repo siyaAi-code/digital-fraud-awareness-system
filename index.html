@@ -1,0 +1,748 @@
+!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield AI - Digital Fraud Awareness</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            padding: 30px;
+            text-align: center;
+            border-bottom: 3px solid #38bdf8;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        header h1 {
+            margin: 0;
+            color: #38bdf8;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            color: #94a3b8;
+            margin-top: 8px;
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background-color: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid #334155;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid #475569;
+            background: #0f172a;
+            color: white;
+            font-size: 16px;
+            box-sizing: border-box;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            border-color: #38bdf8;
+        }
+
+        button {
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            margin-right: 10px;
+            transition: background-color 0.3s, transform 0.1s;
+            color: white;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .analyze-btn {
+            background-color: #007bff;
+            width: 100%;
+            margin-right: 0;
+        }
+
+        .analyze-btn:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 18px;
+            background: #0f172a;
+            border-left: 5px solid #38bdf8;
+            border-radius: 6px;
+            display: none;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .scam-box {
+            background: #0f172a;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            transition: transform 0.2s;
+        }
+
+        .scam-box:hover {
+            transform: translateY(-3px);
+            border-color: #38bdf8;
+        }
+
+        .scam-box h3 {
+            margin-top: 0;
+            color: #38bdf8;
+        }
+
+        .emergency {
+            background: linear-gradient(135deg, #7f1d1d, #450a0a);
+            border: 1px solid #ef4444;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+        }
+
+        .emergency h3 {
+            color: #fca5a5;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🛡️ CyberShield AI</h1>
+    !DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Fraud Awareness Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: #F1F5F9;
+      color: #1E293B;
+      padding-bottom: 50px;
+    }
+
+    /* Header Section with Gradient */
+    .hero-header {
+      background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+      color: white;
+      padding: 48px 20px;
+      text-align: center;
+      border-bottom-left-radius: 32px;
+      border-bottom-right-radius: 32px;
+      box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.25);
+    }
+
+    .hero-header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 10px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-header p {
+      font-size: 16px;
+      color: #DBEAFE;
+      max-width: 600px;
+      margin: 0 auto 24px auto;
+      line-height: 1.5;
+    }
+
+    /* Emergency Helpline Pill */
+    .helpline-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #EF4444;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+    }
+
+    /* Filter Buttons */
+    .filter-container {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 30px 20px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 12px;
+      background: white;
+      color: #475569;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: #2563EB;
+      color: white;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Category Colors */
+    .card.high-risk { border-top: 6px solid #EF4444; }
+    .card.warning { border-top: 6px solid #F59E0B; }
+    .card.safe { border-top: 6px solid #10B981; }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+
+    .high-risk .badge { background: #FEF2F2; color: #DC2626; }
+    .warning .badge { background: #FFFBEB; color: #D97706; }
+    .safe .badge { background: #ECFDF5; color: #059669; }
+
+    .card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #475569;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .action-box {
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 13.5px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .high-risk .action-box { background: #FEF2F2; color: #B91C1C; }
+    .warning .action-box { background: #FFFBEB; color: #B45309; }
+    .safe .action-box { background: #ECFDF5; color: #047857; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="hero-header">
+    <h1>Digital Suraksha Kavach</h1>
+    <p>Online scams se bachne ke liye aasaan aur saaf jaankari. Satark rahein, surakshit rahein.</p>
+    <div class="helpline-badge">
+      Cyber Fraud Helpline: 1930 par turant call karein
+    </div>
+  </div>
+
+  <!-- Filter Tabs -->
+  <div class="filter-container">
+    <button class="filter-btn active" onclick="filterCards('all', this)">Sabhi Alerts</button>
+    <button class="filter-btn" onclick="filterCards('high-risk', this)">High Risk Scams</button>
+    <button class="filter-btn" onclick="filterCards('warning', this)">UPI & Banking</button>
+    <button class="filter-btn" onclick="filterCards('safe', this)">Suraksha Tips</button>
+  </div>
+
+  <!-- Cards Container -->
+  <div class="cards-grid" id="cardsContainer"></div>
+
+  <script>
+    // 1. Yeh function kisi bhi text se ##, **, ya markdown symbols ko saaf kar deta hai
+    function cleanMarkdown(text) {
+      if (!text) return "";
+      return text
+        .replace(/[#*`~_>]/g, '') // Saare markdown symbols hata dega
+        .replace(/\s+/g, ' ')     // Extra spaces theek karega
+        .trim();
+    }
+
+    // 2. Sample Data (Isme jaan-boojh kar ## aur ** daale gaye hain taaki aap dekh sakein ki code unhe kaise saaf karta hai)
+    const rawFraudData = [
+      {
+        type: "high-risk",
+        badge: "High Risk Scam",
+        title: "## Digital Arrest Fraud **Alert**",
+        description: "Scammers **CBI ya Police** officer bankar video call karte hain aur jhoote parcel ya case ka dar dikhakar paise maangte hain.",
+        tip: "Zaroori Niyam: Koi bhi police agency video call par arrest nahi karti. Turant call kaat dein."
+      },
+      {
+        type: "warning",
+        badge: "UPI & Payment Alert",
+        title: "## Fake QR Code aur **Collect Request**",
+        description: "Olx ya kisi anjaan vyakti dwara paise bhejne ke naam par **QR code** scan karne ya UPI PIN daalne ko kehna.",
+        tip: "Zaroori Niyam: Paise receive karne ke liye kabhi bhi UPI PIN daalne ki zaroorat nahi hoti."
+      },
+      {
+        type: "high-risk",
+        badge: "Malware Warning",
+        title: "## Anjaan **APK File** Download",
+        description: "WhatsApp par Wedding Card, Traffic Challan, ya Bank KYC ke naam par **.apk** file bhejkar phone hack karna.",
+        tip: "Zaroori Niyam: Sirf Google Play Store ya Apple App Store se hi apps download karein."
+      },
+      {
+        type: "safe",
+        badge: "Suraksha Tip",
+        title: "## Two-Step Verification **On Rakhein**",
+        description: "Apne WhatsApp, Gmail aur banking apps par **2-Step Verification** aur biometric lock hamesha chalu rakhein.",
+        tip: "Fayda: Agar kisi ko aapka password pata chal bhi jaye, toh bhi woh account login nahi kar payega."
+      }
+    ];
+
+    // 3. Cards ko screen par render karne ka function
+    function renderCards(filterType = 'all') {
+      const container = document.getElementById('cardsContainer');
+      container.innerHTML = '';
+
+      rawFraudData.forEach(item => {
+        if (filterType === 'all' || item.type === filterType) {
+          // Yahan har text ko cleanMarkdown() se guzara ja raha hai
+          const cleanTitle = cleanMarkdown(item.title);
+          const cleanDesc = cleanMarkdown(item.description);
+          const cleanTip = cleanMarkdown(item.tip);
+
+          const cardHTML = `
+            <div class="card ${item.type}">
+              <div>
+                <span class="badge">${item.badge}</span>
+                <h3>${cleanTitle}</h3>
+                <p>${cleanDesc}</p>
+              </div>
+              <div class="action-box">
+                ${cleanTip}
+              </div>
+            </div>
+          `;
+          container.innerHTML += cardHTML;
+        }
+      });
+    }
+
+    // 4. Filter button click handling
+    function filterCards(type, btnElement) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      btnElement.classList.add('active');
+      renderCards(type);
+    }
+
+    // Page load hone par cards dikhayein
+    renderCards();
+  </script>
+
+</body>
+</html>
+    <p>AI-Powered Digital Fraud Detection & Awareness Platform</p>
+</header>
+
+<div class="container">
+    <!-- 1. AI Scam Analyzer -->
+    <div class="card">
+        <h2>🔍 AI Scam Message & Link Detector</h2>
+        <p>कोई भी संदिग्ध SMS, WhatsApp मैसेज या ईमेल नीचे पेस्ट करें, AI तुरंत जांच कर बताएगा कि यह सुरक्षित है या फ्रॉड:</p>
+        
+        <textarea id="messageInput" placeholder="उदाहरण: Congratulations! You won Rs 50,000 lottery. Click here to claim..."></textarea>
+        
+        <button class="analyze-btn" onclick="analyzeScam()">Analyze with AI</button>
+        <button onclick="sunoResult()" style="background-color: #16a34a;">🔊 जवाब सुनें (Listen)</button>
+        <button onclick="rokoResult()" style="background-color: #dc2626;">⏹️ रोकें (Stop)</button>
+
+        <div id="result"></div>
+    </div>
+
+    <!-- 2. Common Frauds Library -->
+    <div class="card">
+        <h2>📚 आम डिजिटल फ्रॉड (Common Scams)</h2>
+        <div class="grid">
+            <div class="scam-box">
+                <h3>💸 UPI & QR Code Fraud</h3>
+                <p>पैसे प्राप्त करने के लिए कभी भी UPI PIN नहीं डालना होता। स्कैमर्स QR कोड भेजकर पैसे कटवा लेते हैं।</p>
+            </div>
+            <div class="scam-box">
+                <h3>🎣 Phishing Links</h3>
+                <p>बैंक KYC अपडेट या बिजली बिल कटने के नाम पर आने वाले नकली लिंक पर कभी क्लिक न करें।</p>
+            </div>
+            <div class="scam-box">
+                <h3>📞 Digital Arrest / Fake Call</h3>
+                <p>पुलिस या CBI बनकर वीडियो कॉल पर डराने और पैसे मांगने वाले कॉल पूरी तरह फर्जी होते हैं।</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Emergency Helpline -->
+    <div class="emergency">
+        <h3>🚨 साइबर फ्रॉड होने पर तुरंत क्या करें?</h3>
+        <p>तुरंत राष्ट्रीय साइबर हेल्पलाइन नंबर <strong>1930</strong> पर कॉल करें या <strong>cybercrime.gov.in</strong> पर शिकायत दर्ज करें।</p>
+    </div>
+</div>
+
+<script>
+  const API_KEY = "YOUR_API_KEY_HERE";
+
+    async function analyzeScam() {
+        const input = document.getElementById("messageInput").value;
+        const resultDiv = document.getElementById("result");
+
+        if (!input.trim()) {
+            alert("कृपया पहले कोई मैसेज पेस्ट करें!");
+            return;
+        }
+
+        window.speechSynthesis.cancel();
+        resultDiv.style.display = "block";
+        resultDiv.innerText = "🤖 AI मैसेज की जांच कर रहा है, कृपया प्रतीक्षा करें...";
+
+        const prompt = `Analyze this message for digital fraud or scam in simple Hindi. Tell me: 1) Risk Level (Low/Medium/High), 2) Why it is suspicious (Red Flags), and 3) Advice for the user. Keep it clear and concise. Message: "${input}"`;
+
+        try {
+            const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "X-goog-api-key": API_KEY
+                },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: prompt }] }]
+                })
+            });
+
+            const data = await response.json();
+
+            // --- यह ऊपर वाला हिस्सा है जिसे आपको अपडेट करना है ---
+if (data.candidates && data.candidates[0]) {
+    const aiReply = data.candidates[0].content.parts[0].text;
+    resultDiv.innerText = aiReply;
+} else {
+    resultDiv.innerText = "Error: " + JSON.stringify(data);
+}
+} catch (error) {
+    resultDiv.innerText = "Error Detail: " + error.message;
+}
+}
+
+// --- नीचे के इस हिस्से को बिल्कुल न हटाएं, यह बिल्कुल सही है ---
+function sunoResult() {
+    window.speechSynthesis.cancel();
+    const resultText = document.getElementById("result").innerText;
+    
+    if (!resultText.trim() || resultText.includes("जांच कर रहा है")) {
+        alert("सुनने के लिए पहले किसी मैसेज की जांच पूरी होने दें!");
+        return;
+    }
+
+    const speech = new SpeechSynthesisUtterance(resultText);
+    speech.lang = "hi-IN";
+    speech.rate = 0.95;
+    window.speechSynthesis.speak(speech);
+}
+</script>
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Fraud Awareness Quiz</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .quiz-container {
+            background: #ffffff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 550px;
+            width: 90%;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            color: #1e293b;
+            font-weight: bold;
+        }
+        .question-text {
+            font-size: 1.15rem;
+            color: #0f172a;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .option-btn {
+            padding: 12px 15px;
+            text-align: left;
+            background: #f8fafc;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        .option-btn:hover:not(:disabled) {
+            background: #e2e8f0;
+            border-color: #94a3b8;
+        }
+        .option-btn.correct {
+            background: #dcfce7;
+            border-color: #22c55e;
+            color: #14532d;
+            font-weight: bold;
+        }
+        .option-btn.wrong {
+            background: #fee2e2;
+            border-color: #ef4444;
+            color: #7f1d1d;
+        }
+        .explanation-box {
+            margin-top: 15px;
+            padding: 12px;
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            color: #1e3a8a;
+            font-size: 0.95rem;
+            display: none;
+            border-radius: 4px;
+        }
+        .next-btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            display: none;
+        }
+        .next-btn:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container" id="quiz-box">
+    <div class="header">
+        <span>🛡️ Cyber Suraksha Quiz</span>
+        <span id="progress">Question 1/3</span>
+    </div>
+    
+    <div id="question-area">
+        <div class="question-text" id="question">Question yahan load hoga...</div>
+        <div class="options-list" id="options"></div>
+        <div class="explanation-box" id="explanation"></div>
+        <button class="next-btn" id="next-btn" onclick="nextQuestion()">Agla Sawal ➔</button>
+    </div>
+</div>
+
+<script>
+    const quizData = [
+        {
+            question: "1. Aapko ek anjaan number se call aata hai ki aapki lottery lagi hai, aur paise claim karne ke liye UPI PIN daalne ko kaha jata hai. Aap kya karenge?",
+            options: [
+                "Turant UPI PIN daal kar paise receive karunga",
+                "Call cut kar dunga, kyunki paise receive karne ke liye PIN nahi lagta",
+                "Unhe apna bank account number aur OTP de dunga"
+            ],
+            correct: 1,
+            explanation: "💡 Tip: Paise receive karne ke liye kabhi bhi UPI PIN ya OTP ki zaroorat nahi hoti. PIN sirf paise bhejne ke liye hota hai."
+        },
+        {
+            question: "2. SMS par ek link aata hai: 'Aapka bijli connection aaj raat kat jayega, turant update karne ke liye is link par click karein.' Yeh kya hai?",
+            options: [
+                "Electricity board ka official message",
+                "Ek Phishing Scam (nakli link)",
+                "Bank ka verification message"
+            ],
+            correct: 1,
+            explanation: "💡 Tip: Scammers darr paida karke (Urgency) nakli links par click karwate hain taaki aapka phone hack ya bank details chori kar sakein."
+        },
+        {
+            question: "3. Online shopping karte waqt koi seller aapko WhatsApp par ek QR code bhejta hai aur kehta hai ki 'Isko scan karke aapko cashback milega'. Sahi kadam kya hai?",
+            options: [
+                "QR code scan karke payment approve kar dena",
+                "QR code scan karne se mana karna",
+                "Apne dost ke phone se scan karna"
+            ],
+            correct: 1,
+            explanation: "💡 Tip: QR code scan karne se aapke account se paise kat-te hain, aate nahi hain."
+        }
+    ];
+
+    let currentIndex = 0;
+    let score = 0;
+
+    function loadQuestion() {
+        const currentQ = quizData[currentIndex];
+        document.getElementById("progress").innerText = `Question ${currentIndex + 1}/${quizData.length}`;
+        document.getElementById("question").innerText = currentQ.question;
+        
+        const optionsDiv = document.getElementById("options");
+        optionsDiv.innerHTML = "";
+        
+        const expBox = document.getElementById("explanation");
+        expBox.style.display = "none";
+        document.getElementById("next-btn").style.display = "none";
+
+        currentQ.options.forEach((opt, index) => {
+            const btn = document.createElement("button");
+            btn.classList.add("option-btn");
+            btn.innerText = opt;
+            btn.onclick = () => checkAnswer(index, btn);
+            optionsDiv.appendChild(btn);
+        });
+    }
+
+    function checkAnswer(selectedIndex, selectedBtn) {
+        const currentQ = quizData[currentIndex];
+        const allButtons = document.querySelectorAll(".option-btn");
+        
+        allButtons.forEach(btn => btn.disabled = true);
+
+        if (selectedIndex === currentQ.correct) {
+            selectedBtn.classList.add("correct");
+            score++;
+        } else {
+            selectedBtn.classList.add("wrong");
+            allButtons[currentQ.correct].classList.add("correct");
+        }
+
+        const expBox = document.getElementById("explanation");
+        expBox.innerText = currentQ.explanation;
+        expBox.style.display = "block";
+
+        document.getElementById("next-btn").style.display = "block";
+    }
+
+    function nextQuestion() {
+        currentIndex++;
+        if (currentIndex < quizData.length) {
+            loadQuestion();
+        } else {
+            showResult();
+        }
+    }
+
+    function showResult() {
+        const quizBox = document.getElementById("quiz-box");
+        let badge = score === quizData.length ? "🏆 Cyber Warrior!" : "🛡️ Cyber Learner!";
+        
+        quizBox.innerHTML = `
+            <div style="text-align: center; padding: 20px 0;">
+                <h2>Quiz Complete!</h2>
+                <p style="font-size: 1.5rem; font-weight: bold; color: #2563eb;">Aapka Score: ${score} / ${quizData.length}</p>
+                <p style="font-size: 1.2rem;">Badge Earned: <strong>${badge}</strong></p>
+                <button class="next-btn" style="display: block;" onclick="location.reload()">Dobara Khelein 🔄</button>
+            </div>
+        `;
+    }
+
+    loadQuestion();
+</script>
+
+</body>
+</html>
+</body>
+</html>
